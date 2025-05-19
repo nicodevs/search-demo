@@ -12,7 +12,7 @@ class SearchResults extends Component
 
     public $type = 'products';
 
-    #[On('search-keyword-changed.{type}')]
+    #[On('search-keyword-changed')]
     public function search($query)
     {
         if ($this->type === 'products') {

@@ -10,8 +10,7 @@ class SearchBox extends Component
 
     public function search()
     {
-        $this->dispatch('search-keyword-changed.products', $this->query);
-        $this->dispatch('search-keyword-changed.posts', $this->query);
+        $this->dispatch('search-keyword-changed', $this->query);
     }
 
     public function render()
