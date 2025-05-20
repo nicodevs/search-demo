@@ -29,7 +29,12 @@
         @if ($mode === 'multiple')
             <div>
                 <livewire:search-box />
+                <livewire:search-results type="posts" />
                 <livewire:search-results type="products" />
+                <livewire:search-results type="posts" />
+                <livewire:search-results type="recipes" />
+                <livewire:search-results type="users" />
+                <livewire:search-results type="todos" />
                 <livewire:search-results type="posts" />
             </div>
         @else

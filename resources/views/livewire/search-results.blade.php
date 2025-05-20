@@ -1,8 +1,8 @@
 <div class="my-4 p-4 border border-gray-300 rounded-xl">
     <pre class="bg-amber-200 mb-2">search-results</pre>
 
-    <div class="text-lg font-semibold mb-4 capitalize">
-        {{ $type }}
+    <div class="text-xl font-semibold mb-4">
+        {{ $type }} / <pre>{{ $endpoint }}</pre>
     </div>
 
     @if(count($results))
@@ -10,7 +10,7 @@
             @foreach($results as $item)
                 <div class="bg-white shadow rounded-xl p-4">
                     <h2 class="text-lg font-bold mb-2">
-                        {{ $item['title'] ?? 'Untitled' }}
+                        {{ $item['title'] ?? $item['name'] ?? 'Untitled' }}
                     </h2>
 
                     @if($type === 'products')
